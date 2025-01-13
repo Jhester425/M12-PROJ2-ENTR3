@@ -1,0 +1,107 @@
+body {
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(4, 4, 95);
+    color: black;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    padding: 20px;
+    gap: 20px; /* Add space between the sidebar and game board */
+}
+
+.sidebar {
+    background-color: rgb(163, 163, 236);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+}
+
+h1 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.stats {
+    margin-bottom: 15px;
+}
+
+.stats div {
+    margin-bottom: 8px;
+}
+
+.instructions {
+    font-size: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: rgb(4, 4, 95);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+    background-color: rgb(4, 4, 95);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+input[type="range"] {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 32px); /* Dynamically adjust columns based on content */
+    grid-template-rows: repeat(auto-fill, 32px); /* Dynamically adjust rows based on content */
+    border: 2px solid #34495e; /* Border will stay the same but the content area will expand */
+    border-radius: 8px;
+    padding: 0; /* Remove padding to prevent resizing issues */
+    width: auto; /* Let the width grow based on the content */
+    height: auto; /* Let the height grow based on the content */
+}
+
+
+.life-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between bar and percentage text */
+    margin-bottom: 15px; /* Spacing between other stats */
+}
+
+.life-bar-inner {
+    width: 200px; /* Set the width of the bar */
+    height: 20px; /* Height of the bar */
+    background-color: red; /* Damage color */
+    border-radius: 10px; /* Rounded edges */
+    overflow: hidden; /* Ensure the fill stays inside the container */
+    position: relative;
+}
+
+.life-bar-fill {
+    height: 100%; /* Fill height is always 100% */
+    background-color: rgb(11, 168, 11); /* Remaining health color */
+    border-radius: 10px; /* Rounded edges for the fill */
+    transition: width 0.2s ease; /* Smooth animation when the bar updates */
+    position: absolute;
+    left: 0;
+    top: 0;
+}

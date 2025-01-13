@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h1>SNAKE GAME</h1>
+            <div class="stats">
+                <div class="life-bar">
+                    <div class="life-bar-inner">
+                        <div id="lifeBarFill" class="life-bar-fill"></div>
+                    </div>
+                    <span id="lifePercentage">100%</span>
+                </div>                
+                <div><strong>Score:</strong> <span id="score">10000</span></div>
+                <div><strong>Level:</strong> <span id="level">69</span></div>
+                <div><strong>Highscore:</strong> <span id="highscore">69000</span></div>
+            </div>
+            <button id="playPauseButton">Play</button>
+            <button id="pauseButton" style="display:none;">Pause</button>
+            <div class="speed">
+                <label for="speed">Speed:</label>
+                <input type="range" id="speed" min="1" max="10" value="5">
+            </div>
+            <div>Instructions:</div>
+            <div class="instructions">Use arrow keys to move and dont die!</div>
+        </div>
+        <div id="gameBoard" class="game-board"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
